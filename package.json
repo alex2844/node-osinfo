@@ -7,9 +7,7 @@
 		"win32",
 		"linux"
 	],
-	"dependencies": {
-		"pkg": "^4.3.1"
-	},
+	"dependencies": {},
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/alex2844/node-osinfo.git"
