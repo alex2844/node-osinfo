@@ -33,8 +33,8 @@ module.exports = function(callback) {
 						if (line.indexOf('=') !== -1)
 							release[line.split('=')[0].trim().toUpperCase()] = line.split('=')[1].trim();
 					});
-					res.distro = (release.DISTRIB_ID || release.NAME || 'unknown').replace(/"/g, '');
-					res.release = (release.DISTRIB_RELEASE || release.VERSION_ID || 'unknown').replace(/"/g, '');
+					res.distro = (release.DISTRIB_ID || release.NAME || release.CHROMEOS_RELEASE_NAME || 'unknown').replace(/"/g, '');
+					res.release = (release.DISTRIB_RELEASE || release.VERSION_ID || release.CHROMEOS_RELEASE_VERSION || 'unknown').replace(/"/g, '');
 					return (callback || resolve)(res);
 				});
 			}
